@@ -1,6 +1,8 @@
 # Early-Warning System for Gentrification in California Census Tracts
 
-UE24CS352A Machine Learning mini-project, Team 40: Annanya Babu (PES1UG24AM045), Aayushman Singh (PES1UG24AM006). Based on the approach of Pattabi (Stanford, 2018), re-implemented
+UE24CS352A Machine Learning mini-project,
+Team 40: Annanya Babu (PES1UG24AM045), Aayushman Singh (PES1UG24AM006). 
+Based on the approach of Pattabi (Stanford, 2018), re-implemented
 on current Census Bureau data (American FactFinder was retired; the same ACS tables are served by the Census API).
 
 **Problem.** Given what a California census tract looked like in 2010-2011, predict whether it will gentrify
