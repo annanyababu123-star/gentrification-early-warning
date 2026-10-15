@@ -1,0 +1,40 @@
+{
+ "n_eligible": 3982,
+ "median_income_cutoff": 60213.5,
+ "eligible_cost": {
+  "positive_rate": 0.6062280261175289,
+  "no_info": 0.6062280261175289,
+  "one_feature_median_cost": 0.6411404576205999,
+  "xgb": 0.6891010888823036,
+  "l1": 0.6983966255367176
+ },
+ "eligible_income": {
+  "positive_rate": 0.4731290808638875,
+  "no_info": 0.5268709191361125,
+  "one_feature_median_cost": 0.5346522449134001,
+  "xgb": 0.6521837544056543,
+  "l1": 0.6222990737880115
+ },
+ "classic_XGBoost": {
+  "auc": 0.8637381802799694,
+  "precision_at_0_5": 0.5565749235474006,
+  "recall_at_0_5": 0.15004122011541632,
+  "precision_top10pct": 0.48743718592964824,
+  "base_rate": 0.1523103967855349,
+  "auc_eligible_only": 0.6687114463898831,
+  "base_rate_eligible": 0.3046207935710698,
+  "precision_top10pct_eligible": 0.5577889447236181,
+  "lift_top10pct_eligible": 1.8310928094719268
+ },
+ "classic_L1 logit": {
+  "auc": 0.8410034335238784,
+  "precision_at_0_5": 0.4988235294117647,
+  "recall_at_0_5": 0.17477328936521022,
+  "precision_top10pct": 0.4547738693467337,
+  "base_rate": 0.1523103967855349,
+  "auc_eligible_only": 0.6408559374085423,
+  "base_rate_eligible": 0.3046207935710698,
+  "precision_top10pct_eligible": 0.507537688442211,
+  "lift_top10pct_eligible": 1.6661294933032849
+ }
+}

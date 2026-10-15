@@ -1,0 +1,157 @@
+{
+ "A1_cost_column_consecutive_corr": {
+  "2010->2011": 0.9827473754090551,
+  "2011->2012": 0.9827948992605429,
+  "2012->2013": 0.9839545733463099,
+  "2013->2014": 0.9850444575518555,
+  "2014->2015": 0.9869458529826065,
+  "2015->2016": 0.9877126529256369
+ },
+ "A2_income_direction": {
+  "pearson": 0.4486861493640444,
+  "spearman": 0.3958311750008222
+ },
+ "B_baselines": {
+  "cost": {
+   "1 feature (2011 median cost)": 0.640508884661853,
+   "1 feature (2011 income-distribution distance)": 0.5735823656890856,
+   "2 features (median cost + median income)": 0.6614776645310672,
+   "top-5 XGBoost features": 0.6878452999460579,
+   "all 401 features, XGBoost": 0.7157196055607604,
+   "all 401 features, L1 logit": 0.7184836612440735
+  },
+  "income": {
+   "1 feature (2011 median cost)": 0.5301376625752744,
+   "1 feature (2011 income-distribution distance)": 0.5020086307242427,
+   "2 features (median cost + median income)": 0.5259942209478025,
+   "top-5 XGBoost features": 0.6040955720220689,
+   "all 401 features, XGBoost": 0.6343560236840196,
+   "all 401 features, L1 logit": 0.6226767863170214
+  },
+  "corr_level_vs_change_cost": -0.4477838595159799
+ },
+ "C_shuffled": {
+  "cost": [
+   0.504395249947162,
+   0.49598029381054676,
+   0.5015062758866524
+  ],
+  "income": [
+   0.4966093020027949,
+   0.5061523878021621,
+   0.4973657521758194
+  ]
+ },
+ "D_label_sensitivity": {
+  "cost": {
+   "baseline (median split)": {
+    "n": 7964,
+    "no_info": 0.501004520341537,
+    "xgb": 0.7157196055607604,
+    "l1": 0.7184836612440735
+   },
+   "absolute (change > 0)": {
+    "n": 7964,
+    "no_info": 0.6474133601205425,
+    "xgb": 0.7138369184276687,
+    "l1": 0.72036697927806
+   },
+   "extreme thirds (top vs bottom)": {
+    "n": 5310,
+    "no_info": 0.5,
+    "xgb": 0.7817325800376648,
+    "l1": 0.7926553672316384
+   }
+  },
+  "income": {
+   "baseline (median split)": {
+    "n": 7964,
+    "no_info": 0.5,
+    "xgb": 0.6343560236840196,
+    "l1": 0.6226767863170214
+   },
+   "absolute (change > 0)": {
+    "n": 7964,
+    "no_info": 0.6671270718232044,
+    "xgb": 0.700778137391288,
+    "l1": 0.689352995359724
+   },
+   "extreme thirds (top vs bottom)": {
+    "n": 5314,
+    "no_info": 0.5003763643206625,
+    "xgb": 0.6915675884440333,
+    "l1": 0.6703025761223698
+   }
+  }
+ },
+ "E_windows": {
+  "features 2010-11, 2012->2015 (3-year horizon)": {
+   "cost": {
+    "no_info": 0.5010042681395933,
+    "xgb": 0.7027361708730402,
+    "l1": 0.7022335011786982
+   },
+   "income": {
+    "no_info": 0.5032638714536781,
+    "xgb": 0.626286584736705,
+    "l1": 0.6100925394271204
+   }
+  },
+  "features 2011-12, 2013->2016 (pivot 2013)": {
+   "cost": {
+    "no_info": 0.5014438166980539,
+    "xgb": 0.6741996233521658,
+    "l1": 0.677338355304457
+   },
+   "income": {
+    "no_info": 0.5004394224733208,
+    "xgb": 0.6236032642812304,
+    "l1": 0.6140615191462648
+   }
+  }
+ },
+ "F_error_analysis": {
+  "cost": {
+   "overall": 0.7157207433450528,
+   "by_size": {
+    "small tracts": 0.7,
+    "medium tracts": 0.728,
+    "large tracts": 0.719
+   },
+   "by_county": {
+    "Los Angeles": 0.696,
+    "San Diego": 0.702,
+    "Orange": 0.717,
+    "Riverside": 0.769,
+    "Santa Clara": 0.769,
+    "San Bernardino": 0.716,
+    "Alameda": 0.777,
+    "Sacramento": 0.757,
+    "Contra Costa": 0.749,
+    "Fresno": 0.732
+   },
+   "predicted_positive_rate": 0.5190858864892014
+  },
+  "income": {
+   "overall": 0.6343545956805625,
+   "by_size": {
+    "small tracts": 0.634,
+    "medium tracts": 0.638,
+    "large tracts": 0.631
+   },
+   "by_county": {
+    "Los Angeles": 0.612,
+    "San Diego": 0.62,
+    "Orange": 0.605,
+    "Riverside": 0.676,
+    "Santa Clara": 0.669,
+    "San Bernardino": 0.669,
+    "Alameda": 0.708,
+    "Sacramento": 0.656,
+    "Contra Costa": 0.633,
+    "Fresno": 0.657
+   },
+   "predicted_positive_rate": 0.5102963335007534
+  }
+ }
+}

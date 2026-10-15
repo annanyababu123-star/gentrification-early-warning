@@ -1,0 +1,6 @@
+# raw Census downloads are large and reproducible with fetch_census.py
+data/
+__pycache__/
+*.pyc
+.env
+run.log

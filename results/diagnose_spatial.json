@@ -1,0 +1,46 @@
+{
+ "corr_pre_post_cost": -0.05396220985274516,
+ "corr_pre_post_income": -0.16503673796496332,
+ "moran_labels_cost": 0.14319262260839002,
+ "moran_labels_income": 0.04158510765789158,
+ "auc_cost": {
+  "spatial_lag_cost": 0.5848815231334501,
+  "spatial_lag_income": 0.521426427165044,
+  "local_moran_cost": 0.5134638306889518,
+  "local_moran_income": 0.5047398314608867,
+  "S2502_C03_001E": 0.6860677423301585,
+  "DP03_0082E": 0.6153043340611215,
+  "S2503_C01_028E": 0.6932103472067184,
+  "own pre-change": 0.5026418587989854
+ },
+ "auc_income": {
+  "spatial_lag_cost": 0.5115912427117407,
+  "spatial_lag_income": 0.5268270565107019,
+  "local_moran_cost": 0.5030324178542265,
+  "local_moran_income": 0.5047007742778212,
+  "S2503_C02_012E": 0.5195010205391868,
+  "S2503_C03_048E": 0.5478657915920487,
+  "S2502_C02_021E": 0.5484856073828966,
+  "own pre-change": 0.57677069414071
+ },
+ "neighbour_levels_cost": {
+  "baseline": {
+   "random": 0.7157196055607604,
+   "county": 0.7103242552894459
+  },
+  "+ neighbour level means": {
+   "random": 0.717854810777049,
+   "county": 0.7167723710214052
+  }
+ },
+ "neighbour_levels_income": {
+  "baseline": {
+   "random": 0.6343560236840196,
+   "county": 0.6205901609801094
+  },
+  "+ neighbour level means": {
+   "random": 0.641638670439454,
+   "county": 0.6301878558302658
+  }
+ }
+}
