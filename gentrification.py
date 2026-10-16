@@ -254,8 +254,10 @@ def build_dataset():
 
     valid = cost_post.notna() & inc_post.notna()
     ids = idx[valid.values]
-    tr_ids, tmp = train_test_split(ids, test_size=0.10, random_state=SEED)
-    va_ids, te_ids = train_test_split(tmp, test_size=0.50, random_state=SEED)
+    # split a plain numpy array (pandas 3 + pyarrow string indexes break sklearn's indexing), then wrap back into Index
+    tr_arr, tmp = train_test_split(ids.to_numpy(), test_size=0.10, random_state=SEED)
+    va_arr, te_arr = train_test_split(tmp, test_size=0.50, random_state=SEED)
+    tr_ids, va_ids, te_ids = pd.Index(tr_arr), pd.Index(va_arr), pd.Index(te_arr)
     train_mask = idx.isin(tr_ids)
 
     thr_cost = cost_post[tr_ids].median()      # threshold learned on the training set only
